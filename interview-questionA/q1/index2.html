@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- new方法的原理 -->
+  <!-- <script>
+    function Foo(e) {
+      this.name = 'wn'
+      this.age = e
+    }
+    function objectFactory() {
+      const obj = {}; // 11111111
+
+      
+      const Constructor = [].shift.call(arguments);
+      // const [constructor, ...args] = [...arguments]
+
+      //执行原型连接
+      obj.__proto__ = Constructor.prototype; // 444444444
+
+      //执行构造函数，将函数的属性或者方法添加到创建的空对象上
+      Constructor.apply(obj, arguments); //333333333333333
+
+      return obj; // 222222
+    }
+    // function objectFactory() {
+    //   const obj = new Object();
+    //   const Constructor = [].shift.call(arguments);
+
+    //   obj.__proto__ = Constructor.prototype;
+
+    //   const ret = Constructor.apply(obj, arguments);
+
+    //   return typeof ret === "object" ? ret : obj;
+    // }
+    console.log(objectFactory(Foo, 1))
+  </script> -->
+  <script>
+    var obj = new Object()
+    console.log(obj.prototype)
+  </script>
+</body>
+</html>
