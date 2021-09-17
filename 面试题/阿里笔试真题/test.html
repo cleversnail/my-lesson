@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      /* margin: 0; */
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div></div> -->
+  <script>
+    // var arr = [5, 100, 6, 3, -12]
+    // arr.sort((a, b) => {
+    //   return a - b
+    // })
+    // console.log(arr)
+
+
+    // b = 1
+    // console.log(b)
+
+    // var Obj = function (msg) {
+    //   this.msg = msg;
+    //   this.shout = function () {
+    //     console.log(this.msg)
+    //   }
+    //   this.waitAndShout = function () {
+    //     //隔五秒钟后执行上面的shout方法
+    //     setInterval(() => {
+    //       this.shout()
+    //     }, 3000)
+    //   }
+    //   this.waitAndShout()
+    // }
+    // Obj('wn')
+    // obj = {
+    //   key0: 0,
+    //   key1: 1
+    // }
+    var url = 'http://www.taobao.com/index.php?key0=0&key1=1&key2=2'
+    // var obj = parseQueryString(url);
+
+    function parseQueryString(argu) {
+      var str = argu.split('?')[1]
+      var result = {}
+      var temp = str.split('&') // [key0=0, key1=1]
+      for (var i = 0; i < temp.length; i++) {
+        var temp2 = temp[i].split('=')
+        console.log(temp2)
+        result[temp2[0]] = temp2[1]
+      }
+      return result
+    }
+    parseQueryString(url)
+  </script>
+</body>
+
+</html>
