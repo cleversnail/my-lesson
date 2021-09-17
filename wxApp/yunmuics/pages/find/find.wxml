@@ -1,0 +1,180 @@
+<nav-bar></nav-bar>
+<view class="body-view">
+	<loading hidden="{{hidden}}">
+		拼命加载中...
+	</loading>
+</view>
+<!-- 引入头部导航栏 -->
+<view class="container">
+
+	<!-- 头部轮播图 -->
+	<view class="head-swiper__banners">
+		<swiper
+		 class="swiper-banners"
+		 indicator-dots="{{indicatorDots}}"
+		 indicator-color="{{indicatorColor}}"
+		 indicator-active-color="{{indicatorActiveColor}}"
+		 autoplay="{{autoplay}}"
+		 interval="{{interval}}"
+		 duration="{{duration}}"
+		 circular="{{circular}}"
+		>
+			<!-- 使用block进行循环 -->
+			<block wx:for="{{banners}}" wx:key="index">
+				<swiper-item item-id>
+					<!-- 轮播图 -->
+					<image class="banners-image" src="{{item.imageUrl}}" />
+					<view class="banners-typeTitle" style="background-color:{{item.titleColor}}">
+						<!-- 右下角标题 -->
+						{{item.typeTitle}}
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!-- 中部跳转入口 ，使用scroll-view横向滑动-->
+	<view class="head-entrance">
+		<scroll-view
+		 class="scroll-view"
+		 scroll-x="true"
+		 style="width: 100%"
+		>
+			<!-- block循环 -->
+			<block wx:for="{{entryIcon}}" wx:key="index">
+				<view
+				 class="scroll-view__X"
+				 bindtap="toSongSheet"
+				 data-url="{{item.gotoUrl}}"
+				>
+					<image class="entrance-icon" src="{{item.imgUrl}}"></image>
+					<view clsaa="entrance-text">
+						<text>{{item.title}}</text>
+					</view>
+				</view>
+			</block>
+		</scroll-view>
+	</view>
+	<!-- 第一层精选 -->
+	<blockList blocks="{{blocks[0]}}"></blockList>
+	<!-- 第二层推荐 -->
+	<blockSongs blocks="{{blocks[1]}}"></blockSongs>
+	<!-- 第三层 -->
+	<blockList blocks="{{blocks[2]}}"></blockList>
+	<!-- 第四层 -->
+	<view class="page-select">
+		<view class="select-title">
+			<view class="select-text-front">
+				{{blocks[3].uiElement.subTitle.title}}
+			</view>
+			<view class="select-text-after">
+				{{blocks[3].uiElement.button.text}}
+			</view>
+		</view>
+		<view class="select-body">
+			<scroll-view
+			 class="scroll-view"
+			 scroll-x="true"
+			 style="width: 100%"
+			>
+				<block wx:for="{{blocks[3].extInfo.squareFeedViewDTOList}}" wx:key="index">
+					<view class="select-box">
+						<image class="select-img" src="{{item.resource.mlogBaseData.coverUrl}}"></image>
+						<text class="select-text" >
+          {{item.resource.mlogBaseData.text}}
+        </text>
+					</view>
+				</block>
+			</scroll-view>
+		</view>
+	</view>
+
+	<!-- 第五层 -->
+	<view class="page-select">
+		<view class="select-title">
+			<view class="select-text-front">
+				{{blocks[4].uiElement.subTitle.title}}
+			</view>
+			<view class="select-text-after">
+				{{blocks[4].uiElement.button.text}}
+			</view>
+		</view>
+		<view class="select-body">
+			<scroll-view
+			 class="scroll-view"
+			 scroll-x="true"
+			 style="width: 100%"
+			>
+				<block wx:for="{{blocks[4].extInfo}}" wx:key="index">
+					<view class="select-box">
+						<image class="select-img" src="{{item.verticalCover}}"></image>
+						<text class="select-text" >
+          {{item.title}}
+        </text>
+					</view>
+				</block>
+			</scroll-view>
+		</view>
+	</view>
+
+	<!-- 第六层推荐 -->
+	<view class="page-play">
+		<view class="play-title">
+			<view class="play-text-front">
+				新歌|新碟
+			</view>
+			<view class="play-text-after">
+				<image class="play-text-img" src="../../image/find_play_pic.png"></image>
+				更多新歌
+			</view>
+		</view>
+		<view class="play-body">
+			<view>
+				<scroll-view
+				 class="scroll-view"
+				 scroll-x="true"
+				 style="width: 100%"
+				>
+					<view
+					 class="play-body-outside"
+					 wx:for="{{blocks[5].creatives}}"
+					 wx:key="index"
+					 wx:for-item="creatives"
+					>
+						<block wx:for="{{creatives.resources}}" wx:key="index">
+							<view class="play-box">
+								<image class="play-img-bef" src="{{item.uiElement.image.imageUrl}}"></image>
+								<view class="play-box-text">
+									<view class="box-text-bre">
+										<view class="text-bre-one">
+											{{item.uiElement.mainTitle.title}}
+										</view>
+										<view class="text-bre-two">
+											- {{item.resourceExtInfo.artists[0].name}}
+										</view>
+									</view>
+									<view class="box-text-aft">
+										{{item.uiElement.subTitle.title}}
+									</view>
+								</view>
+								<view
+								 class="play-box-img"
+								 bindtap="playMusic"
+								 data-in="{{item.resourceExtInfo.songData}}"
+								>
+									<image class="play-img-aft" src="../../image/find_play.png"></image>
+								</view>
+							</view>
+						</block>
+					</view>
+				</scroll-view>
+			</view>
+		</view>
+	</view>
+	<!-- 第七层推荐 -->
+	<blockSongs blocks="{{blocks[6]}}"></blockSongs>
+	<!-- 第八层 -->
+	<blockList blocks="{{blocks[7]}}"></blockList>
+</view>
+
+<control></control>
+

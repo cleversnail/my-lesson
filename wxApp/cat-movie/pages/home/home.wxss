@@ -1,0 +1,123 @@
+/* pages/home/home.wxss */
+.container{
+  background: #f1f1f1;
+  height: 100%;
+}
+.header{
+  width: 100%;
+  height: 45px;
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid #aaa;
+  box-sizing: border-box;
+}
+.header_hd{
+  width: 45px;
+  height: 100%;
+  line-height: 45px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header_hd text{
+  color: #666;
+}
+.downtips{
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #aaa;
+}
+.header_ct{
+  flex: 1;
+  display: flex;
+  padding: 0 30px;
+  position: relative;
+}
+.header_ct-btn{
+  flex: 1;
+  font-size: 14px;
+  line-height: 45px;
+  text-align: center;
+}
+.bottomLine{
+  width: 30px;
+  height: 3px;
+  background: #e54847;
+  position: absolute;
+  bottom: 0;
+  /* left: 49px; */
+  transition: left 0.3s;
+}
+
+.header_bd{
+  width: 45px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_bd image{
+  width: 23px;
+  height: 23px;
+}
+
+.sc-view{
+  height: calc(100% - 45px);
+}
+.most-like{
+  padding: 12px 12px 15px 12px;
+  background: #fff;
+}
+.most-like__title{
+  font-size: 14px;
+  color: #333;
+  display: block;
+  margin-bottom: 12px;
+}
+.most-like__list{
+  width: 100%;
+  white-space: nowrap;
+}
+.lists{
+  width: 100%;
+}
+.item-pic{
+  width: 85px;
+  height: 115px;
+  overflow: hidden;
+  position: relative;
+}
+.item-pic image{
+  width: 100%;
+}
+.item-score{
+  width: 100%;
+  position: absolute;
+  bottom: 2px;
+  font-size: 11px;
+  color: #faaf00;
+  padding: 0 4px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.item-name{
+  font-size: 13px;
+  color: #222;
+  margin: 4px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  width: 85px;
+}
+.movie-item{
+  display: inline-block;
+  margin-right: 10px;
+}
+.movie-item:last-child{
+  margin-right: 0;
+}

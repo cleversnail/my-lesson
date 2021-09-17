@@ -1,0 +1,352 @@
+/* pages/search/search.wxss */
+.weui-search-bar{
+    position:relative;
+    /* padding:8px; */
+    display:flex;
+    box-sizing:border-box;
+    /* background-color:#EDEDED; */
+    -webkit-text-size-adjust:100%;
+    align-items:center
+}
+.weui-icon-search{
+    margin-right:8px;font-size:14px;vertical-align:top;margin-top:.64em;
+    height:1em;line-height:1em
+}
+.weui-icon-search_in-box{
+    position:absolute;left:12px;top:50%;margin-top:-8px
+}
+.weui-search-bar__text{
+    display:inline-block;font-size:14px;vertical-align:top
+}
+.weui-search-bar__form{
+    position:relative;
+    /* flex:auto;
+    border-radius:4px;
+    background:#FFFFFF */
+    border-bottom: 1px solid #000;
+    margin-left: 30rpx;
+    width: 400rpx;
+    padding-right: 80rpx;
+}
+.weui-search-bar__box{
+    position:relative;
+    padding-right: 80rpx;
+    box-sizing:border-box;
+    z-index:1;
+}
+.weui-search-bar__input{
+    height:32px;line-height:32px;font-size:14px;caret-color:#07C160
+}
+.weui-icon-clear{
+    position:absolute;top:0;right:0;bottom:0;padding:0 12px;font-size:0
+}
+.weui-icon-clear:after{
+    content:"";height:100%;vertical-align:middle;display:inline-block;width:0;overflow:hidden
+}
+.weui-search-bar__label{
+    position:absolute;top:0;right:0;bottom:0;left:0;z-index:2;border-radius:4px;
+    text-align:center;color:rgba(0,0,0,0.5);background:#FFFFFF;line-height:32px
+}
+.weui-search-bar__cancel-btn{
+    margin-left:8px;line-height:32px;color:#576B95;white-space:nowrap
+}
+
+.clean-bar {
+    /* width: 20rpx;
+    height: 20rpx; */
+}
+.clean-pic {
+    width: 20rpx;
+    height: 20rpx;
+    float: right;
+    position: absolute;
+     margin-top: -30rpx; 
+     margin-left: 450rpx;
+}
+
+.return-pic {
+    width: 60rpx;
+    height: 60rpx;
+    margin-left: 20rpx;
+}
+.songer-pic{
+    width: 60rpx;
+    height: 60rpx;
+    margin-left: 40rpx;
+}
+
+
+
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+}
+
+.poster {
+    width: 670rpx;
+    height: 100rpx;
+    margin-top: 40rpx;
+    margin-left: 40rpx;
+}
+.postername {
+    font-size: 15rpx;
+    position: absolute;
+    margin-top: 10rpx;
+    margin-left: 10rpx;
+
+}
+.poster-outside {
+    border-radius: 10rpx;
+    background-color: slategrey;
+}
+.poster-pic0 {
+    width: 80rpx;
+    height: 80rpx;
+    margin-top: 10rpx;
+}
+.test-title {
+    position: absolute;
+    font-size: 30rpx;
+    line-height: 100rpx;
+    margin-left: 20rpx;
+    color: red;
+}
+.test-age {
+    position: absolute;
+    font-size: 30rpx;
+    line-height: 100rpx;
+    margin-left: 80rpx;
+}
+.test-red {
+    position: absolute;
+    font-size: 30rpx;
+    line-height: 100rpx;
+    margin-left: 270rpx;
+    color: red;
+}
+.test-black {
+    position: absolute;
+    font-size: 30rpx;
+    line-height: 100rpx;
+    margin-left: 400rpx;
+}
+.poster-pic1 {
+    width: 80rpx;
+    height: 80rpx;
+    margin-left: 510rpx;
+}
+
+
+.history {
+    margin: 50rpx 0 0 40rpx;
+}
+.history-name {
+    font-size: 28rpx;
+    font-weight: 550;
+}
+.history-delete {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    margin-left: 510rpx;
+}
+.allhistory {
+    display: flex;
+    flex-wrap: wrap;
+}
+.allhistorybox {
+    margin: 30rpx 20rpx 0 0;
+    background-color: dimgray;
+    border-radius: 10rpx;
+}
+.historyname {
+    font-size: 28rpx;
+    margin: 20rpx 20rpx 20rpx 20rpx;
+}
+
+
+
+
+
+.ranking {
+    margin-left: 40rpx;
+    margin-top: 100rpx;
+}
+.ranking-name {
+    font-size: 28rpx;
+    color: black;
+    font-weight: 550;
+}
+.rankingList {
+    margin-left: 50rpx;
+    margin-top: 30rpx;
+}
+.rankingList-box {
+    width: 100%;
+    height: 80rpx;
+    margin: 0 0 30rpx 0;
+}
+.rankingList-num {
+    line-height: 80rpx;
+    align-content: center;
+}
+.song {
+    margin: -100rpx 0 0 30rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.othersong {
+    margin-top: -100rpx;
+    margin-left: 70rpx;
+}
+.rankigList-songname {
+    font-size: 30rpx;
+    margin-left: 40rpx;
+}
+.rankigList-hotsong {
+    font-size: 25rpx;
+    font-weight: 550;
+    margin-top: 45rpx;
+    margin-left: 20rpx;
+}
+.rankigList-hotnum {
+    float: right;
+    position: absolute;
+    line-height: 80rpx;
+    margin-left: 600rpx;
+    font-size: 20rpx;
+    color: darkgrey;
+}
+.rankingList-songdes {
+    font-size: 22rpx;
+    color: darkgrey;
+    position: absolute;
+    margin-left: 60rpx;
+    margin-top: -30rpx;
+}
+
+
+
+
+
+
+.search_suggest{
+    width:570rpx;
+    margin-left: 40rpx;
+    position: absolute;
+    z-index: 2;
+    background: #fff;
+    box-shadow: 1px 1px 5px #888888;
+    margin-top: 20rpx;
+}
+.header_view_hide{
+    display: none;
+  }
+.search-pic {
+      width: 50rpx;
+      height: 50rpx;
+     margin-top: 25rpx;
+     margin-left: 20rpx;
+}
+
+.search-title {
+    color: #000;
+    margin-left: 15rpx;
+    margin-bottom: 30rpx;
+}
+.songTitle {
+    font-size: 30rpx;
+    font-weight: 700;
+}
+.openBox {
+    float: right;
+    border-radius: 30rpx;
+    margin-right: 30rpx;
+    border-radius: 30rpx;
+    border-bottom: 1px solid #eaeaea;
+}
+.openTap {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    margin: 6rpx 10rpx 0rpx 20rpx;
+
+}
+.openDes {
+    font-size: 25rpx;
+    color: rgba(0,0,0,0.5);
+    margin-right: 20rpx;
+    margin-left: 58rpx;
+}
+.broadcast {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    overflow: hidden;
+    float: right;
+    margin-top: -70rpx;
+    margin-left: -120rpx;
+    margin-right: 80rpx;
+
+}
+.navigation {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    overflow: hidden;
+    float: right;
+    margin-top: -70rpx;
+    margin-right: 20rpx;
+    
+}
+  .search_result{
+    /* display: block;
+    font-size: 14px;
+    color: #000000;
+    padding: 15rpx;
+    margin: 15rpx; */
+    /* border-bottom: 1px solid #eaeaea; */
+    /* float: right; */
+    /* margin-left: -450rpx; */
+    width: 570rpx;    
+    height: 100rpx;
+    border-bottom: 1px solid #eaeaea;
+  }
+  .search_suggest_name {
+    display: block;
+    float: right;
+    position: absolute;
+    margin-left: 85rpx;
+    margin-top: -46rpx;
+    font-size: 14px;
+    color: darkgrey;
+    /* padding: 15rpx;
+    margin: 15rpx; */
+    
+  }
+  .search_result_songs{
+    margin-top: 10rpx;
+    width: 100%;
+    height: 100%;
+    margin-left: 15rpx;
+  }
+  .search_result_song_item{
+     display: block;
+     margin: 15rpx;
+     border-bottom: 1px solid #EDEEF0;
+  }
+  .search_result_song_song_name{
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 15rpx;
+  }
+  .search_result_song_song_art-album{
+    font-size: 11px;
+    color: #000000;
+    font-weight:lighter;
+    margin-bottom: 5rpx;
+  }

@@ -1,0 +1,52 @@
+<!-- pages/songlist/songlist.wxml -->
+<nav-bar></nav-bar>
+<view class="body-view">
+	<loading hidden="{{hidden}}">
+		拼命加载中...
+	</loading>
+</view>
+
+<view class="wrapper">
+
+	<image class="bg-pic" src="../../image/recommend_bg.jpg"></image>
+	<view class="top">
+		<view class="title">
+			<text class="title-day">{{day}}</text>
+			<text class="title-month">/{{month}}</text>
+			<view>
+				<text class="title-text">每日推荐</text>
+			</view>
+		</view>
+	</view>
+	<view class="down">
+		<view class="buttonBox">
+			<image
+			 class="broadcast"
+			 src="../../image/recommend_cicle.png"
+			 bindtap="playAll"
+			/>
+			<text class="broadcast-name">播放全部</text>
+		</view>
+		<view class="songlistbox">
+			<view
+			 class="song-list"
+			 wx:for="{{songs}}"
+			 wx:key="index"
+			>
+				<image class="song-img" src="{{item.album.blurPicUrl}}"></image>
+				<view class="song">
+					<view class="song-name">{{item.name}}</view>
+					<view class="song-author">{{item.artists[0].name}} - {{item.album.name}}</view>
+				</view>
+				<image
+				 class="broadcast-pic"
+				 bindtap="playMusic"
+				 data-in="{{item}}"
+				 src="../../image/recommend_rectangle.png"
+				/>
+				<image class="broadcast-img" src="../../image/recommend_daohang.png" />
+			</view>
+		</view>
+	</view>
+</view>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    Person.prototype.name = 'wn'  // 2
+
+    function Person() {
+      // var this = {  // 3 这个对象其实并不是空的，里面其实有东西
+      //   __proto__: Person.prototype  当我们访问这个对象上的属性的时候，如果对象上没有这个属性，他就会去原型上找，为什么会去原型上找呢？因为他会去找__proto__
+      // }
+    }
+
+    var person = new Person()
+    console.log(person) // 空对象，但是里面展开是能看到东西的， 里面嵌套了啥玩意儿？
+
+    console.log(person.__proto__)  // 2
+
+
+    // 当我们用new 去实例化构造函数的时候 干了3步曲  // 3
+
+
+
+    // person.name  当我们这样去找属性的时候，先找对象自己是否具备这个属性，没有，再去找__proto__，也就是去构造函数的原型上去找
+
+
+
+    var obj = {
+      name: '蜗牛'
+    }
+    console.log(person.__proto__) // {name: 'wn'}
+    person.__proto__ = obj
+    console.log(person.__proto__)
+    // 所以 Person 的构造函数构造出来的对象 的原型 未必飞得是 Person.prototype，它是可以被修改的
+    // __proto__指向谁，就上谁那里找属性
+
+  </script>
+
+  <script>
+    // 注意  深浅拷贝问题
+    Person.prototype.name = 'wn'
+    function Person() {
+
+    }
+    // Person.prototype = {
+    //   name: 'xiangxiang'
+    // }
+    var person = new Person()
+    Person.prototype.name = 'xiangxiang'
+
+    // Person.prototype = {
+    //   name: 'xiangxiang'
+    // }
+    console.log(person.name)
+  </script>
+</body>
+</html>

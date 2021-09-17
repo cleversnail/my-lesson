@@ -1,0 +1,71 @@
+<nav-bar
+ statusBarColor="#16151b"
+ navBarColor="#16151b"
+ titleColor="white"
+></nav-bar>
+<!-- pages/mine/mine.wxml -->
+<view class="wrapper">
+	<view class="main">
+		<view class="mine">
+			<image class="mine-pic" src="{{user.profile.avatarUrl}}" />
+			<text class="mine-name">{{user.profile.nickname}}</text>
+			<text class="mine-vip">开通黑胶VIP</text>
+			<text class="mine-grade">Lv.{{user.level}}</text>
+		</view>
+
+	</view>
+	<view class="des">
+		<view class="my">
+			<text class="my-name">我的音乐</text>
+
+		</view>
+		<scroll-view class="scroll" scroll-x>
+			<block wx:for="{{playlist}}" wx:key="index">
+				<view
+				 class="scroll-box"
+				 bindtap="gotoSongList"
+				 data-id="{{item.id}}"
+				>
+
+					<!-- <view>
+						<text class="scroll-box-top">{{item.mark}}</text>
+					</view> -->
+
+					<!-- <image class="scroll-box-pic" src="{{item.pict}}" /> -->
+
+					<view class="scroll-box-mid">
+						<text >{{item.name}}</text>
+					</view>
+					<view class="scroll-box-down">
+						<text >{{item.deta}}</text>
+					</view>
+					<view class="scroll-box-img">
+						<image src="{{item.coverImgUrl}}" />
+					</view>
+
+				</view>
+			</block>
+		</scroll-view>
+
+		<view class="recommed">
+			<text class="recommed-name">推荐歌单</text>
+			<text class="recommen-delete">x</text>
+		</view>
+		<view class="musicsheet">
+			<block wx:for="{{sheet}}" wx:key="index">
+				<view class="musicsheet-box">
+					<image class="musicsheet-pic" src="{{item.picture}}" />
+					<view>
+						<view class="musicsheet-list">
+							<text>{{item.listname}}</text>
+						</view>
+						<view class="musicsheet-des">
+							<text>{{item.describe}}</text>
+						</view>
+					</view>
+				</view>
+			</block>
+		</view>
+	</view>
+</view>
+

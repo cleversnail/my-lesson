@@ -1,0 +1,79 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="header_hd">
+      <text>南昌</text>
+      <view class="downtips"></view>
+    </view>
+    <view class="header_ct">
+      <view class="header_ct-hot header_ct-btn" bindtap="tabChange" data-index="1">热映</view>
+      <view class="header_ct-cinema header_ct-btn" bindtap="tabChange" data-index="2">影院</view>
+      <view class="header_ct-waiting header_ct-btn" bindtap="tabChange" data-index="3">待映</view>
+      <view class="header_ct-classic header_ct-btn" bindtap="tabChange" data-index="4">经典电影</view>
+      <view class="bottomLine" style="left:{{left}}px"></view>
+    </view>
+    <view class="header_bd">
+      <image src="../../images/fangdajing.png" />
+    </view>
+  </view>
+  <scroll-view class="sc-view" scroll-y="true">
+    <view class="most-like">
+      <text class="most-like__title">最受好评的电影</text>
+      <view class="most-like__list">
+        <scroll-view class="lists" scroll-x="true">
+          <view wx:for="{{list.movieList}}" class="movie-item">
+            <view class="item-pic">
+              <image mode="widthFix" src="{{item.img}}"/>
+              <view class="item-score">
+                <text>观众评分</text>
+                <text>{{item.sc}}</text>
+              </view>
+            </view>
+            <text class="item-name">{{item.nm}}</text>
+          </view>
+          <!-- <view class="movie-item">
+            <view class="item-pic">
+              <image mode="widthFix" src="https://p1.meituan.net/170.230/moviemachine/12437324cea0f64762e61d3341f2743b243014.jpg"/>
+              <view class="item-score">
+                <text>观众评分</text>
+                <text>9.2</text>
+              </view>
+            </view>
+            <text class="item-name">指环王：双塔奇兵</text>
+          </view>
+          <view class="movie-item">
+            <view class="item-pic">
+              <image mode="widthFix" src="https://p1.meituan.net/170.230/moviemachine/12437324cea0f64762e61d3341f2743b243014.jpg"/>
+              <view class="item-score">
+                <text>观众评分</text>
+                <text>9.2</text>
+              </view>
+            </view>
+            <text class="item-name">指环王：双塔奇兵</text>
+          </view>
+          <view class="movie-item">
+            <view class="item-pic">
+              <image mode="widthFix" src="https://p1.meituan.net/170.230/moviemachine/12437324cea0f64762e61d3341f2743b243014.jpg"/>
+              <view class="item-score">
+                <text>观众评分</text>
+                <text>9.2</text>
+              </view>
+            </view>
+            <text class="item-name">指环王：双塔奇兵</text>
+          </view>
+          <view class="movie-item">
+            <view class="item-pic">
+              <image mode="widthFix" src="https://p1.meituan.net/170.230/moviemachine/12437324cea0f64762e61d3341f2743b243014.jpg"/>
+              <view class="item-score">
+                <text>观众评分</text>
+                <text>9.2</text>
+              </view>
+            </view>
+            <text class="item-name">指环王：双塔奇兵</text>
+          </view> -->
+        </scroll-view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+  

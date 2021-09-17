@@ -1,0 +1,212 @@
+/* 搜索 */
+.index_top {
+  width: 100%;
+  height: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15rpx;
+  padding-left: 25rpx;
+  margin-top: 15rpx;
+  box-sizing: border-box;
+}
+
+.index_top .logo{
+  height: 45rpx;
+  width: 250rpx;
+  background-size: cover;
+}
+
+.index_top .search_box {
+  height: 100%;
+  width: 55%;
+  position: relative;
+}
+
+.search_box .search_text {
+  background-color: rgb(255, 241, 243);
+  border-radius: 100rpx;
+  padding-left: 15rpx;
+  padding-right: 80rpx;
+  margin-top: 15rpx;
+}
+
+.search_box .search_ico {
+  position: absolute;
+  right: 5rpx;
+  top: 17rpx;
+  font-size: 18px;
+}
+
+
+/* 轮播图 */
+swiper {
+  height: 250rpx;
+  margin-bottom: 30rpx;
+  
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100rpx;
+}
+
+/* 导航 */
+.nav {
+  height: 130rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* padding: 0 20rpx; */
+  box-sizing: border-box;
+  margin-bottom: 40rpx;
+
+}
+
+.nav .van_item {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.van_item .nav_ico {
+  width: 70rpx;
+  height: 80rpx;
+ 
+}
+
+.van_item .nav_text {
+  margin-top: 10rpx;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #8d8889;
+}
+
+/* 电影分类列表 */
+.move_class {
+  width: 100%;
+  padding: 0 0 0 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+
+.move_class .move_title {
+  border-left: 3px solid #116fff;
+  padding-left: 10rpx;
+  margin-bottom: 20rpx;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.move_list {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+}
+
+.move_itme {
+  height: 100%;
+  width: 230rpx;
+  display: inline-block;
+  margin-bottom: 60rpx;
+}
+
+.move_itme:last-child {
+  margin-right: 0;
+}
+
+.m_layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.m_layout text{
+  padding-top: 20rpx;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+
+.move_itme .move_post {
+  width: 202rpx;
+  height: 274rpx;
+  border-radius: 20rpx;
+  /* padding-right: 10rpx; */
+  box-shadow: 6rpx 10rpx 20rpx #ccc;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+
+
+
+/* carousel/index.wxss */
+
+.imageContainer{
+ width: 100%;
+ height: 450rpx;
+}
+.item{
+ height: 500rpx;
+}
+.itemImg{
+ position: absolute;
+ width: 100%;
+ height: 320rpx;
+ z-index: 5;
+ opacity: 0.7;
+ top: 13%;
+}
+.active{
+ opacity: 1;
+ z-index: 10;
+ height: 380rpx;
+ top: 7%;
+ border-radius: 30rpx;
+ transition:all .2s ease-in 0s;
+  box-shadow: 10rpx 10rpx 20rpx #ccc;
+}
+
+.space {
+  width: 100rpx;
+  height: 300rpx;
+}
+/* .wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: -20rpx;
+} */
+
+/* Swipe样式修改 */
+.imageContainer .wx-swiper-dots.wx-swiper-dots-horizontal{
+     margin-bottom: 2rpx;
+}
+.imageContainer .wx-swiper-dot{
+    width:40rpx;
+    display: inline-flex;
+    height: 5rpx;
+    margin-left: 5rpx;
+    justify-content:space-between;
+}
+.imageContainer .wx-swiper-dot::before{
+    content: '';
+    flex-grow: 1; 
+    background: rgba(211, 211, 211, 0.8);
+    border-radius: 8rpx
+}
+.imageContainer .wx-swiper-dot-active::before{
+    background:#fd6262;
+}

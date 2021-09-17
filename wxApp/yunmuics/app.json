@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/find/find",
+    "pages/mine/mine",
+    "pages/cloud/cloud",
+    "pages/play/play",
+    "pages/login/login",
+    "pages/songSheet/songSheet",
+    "pages/rankingList/rankingList",
+    "pages/songList/songList",
+    "pages/recommend/recommend",
+    "pages/search/search",
+    "pages/singer/singer"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "云声悦",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

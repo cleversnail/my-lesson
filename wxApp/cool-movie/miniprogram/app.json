@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/movie/movie",
+    "pages/profile/profile",
+    "pages/details/details",
+    "pages/settings/settings",
+    "pages/toplist/toplist",
+    "pages/about/about",
+    "pages/history/history",
+    "pages/classify/classify"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "CoolMovie",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#ea6b6b",
+    "list": [
+      {
+        "pagePath": "pages/movie/movie",
+        "iconPath": "images/hot.png",
+        "selectedIconPath": "images/hot-actived.png"
+      },
+      {
+        "pagePath": "pages/movie/movie",
+        "iconPath": "images/film.png",
+        "selectedIconPath": "images/film-actived.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-actived.png"
+      }
+    ]
+  }
+}
