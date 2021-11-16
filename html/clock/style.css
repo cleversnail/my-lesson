@@ -1,0 +1,126 @@
+html{
+  background: #fff;
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.clock{
+  width: 30rem;
+  height: 30rem;
+  border: 7px solid #ffebdb;
+  border-radius: 50%;
+  box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.1),
+              inset 4px 4px 10px rgba(168, 145, 128, 0.6),
+              inset -4px -4px 10px rgba(201, 175, 155, 0.2),
+              4px 4px 10px rgba(168, 145, 128, 0.5);
+  background-image: url('https://every-tuesday.com/wp-content/themes/et2017_sage/assets/images/teachable/watercolor-florals/video-corner-a.jpg');
+  background-size: 111%;
+  padding: 2rem;
+}
+
+.outer-clock-face{
+  position: relative;
+  width: 100%;
+  height: 99%;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.outer-clock-face::before,
+.outer-clock-face::after,
+.marking {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background: #596235;
+  z-index: 0;
+  left: 49%;
+  border-radius: 8px;
+}
+
+.outer-clock-face::after{
+  transform: rotate(90deg);
+}
+
+.marking{
+  width: 3px;
+  background: #596235;
+}
+
+.marking-one{
+  transform: rotate(30deg);
+}
+.marking-two{
+  transform: rotate(60deg);
+}
+.marking-three{
+  transform: rotate(120deg);
+}
+.marking-four{
+  transform: rotate(150deg);
+}
+
+.inner-clock-face {
+  position: absolute;
+  top: 10%;
+  left: 11%;
+  width: 80%;
+  height: 80%;
+  background: #ffebdb;
+  border-radius: 100%;
+  z-index: 1;
+  background-image: url('https://every-tuesday.com/wp-content/themes/et2017_sage/assets/images/teachable/watercolor-florals/video-corner-a.jpg');
+  background-size: 126%;
+}
+
+.inner-clock-face::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 18px;
+  background: #4d4b63;
+  z-index: 12;
+  margin-right: -9px;
+  margin-top: -6px;
+}
+
+.hand{
+  width: 50%;
+  height: 6px;
+  background: #b03715;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  border-radius: 6px;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+}
+
+.hour-hand{
+  width: 30%;
+  z-index: 3;
+}
+.min-hand{
+  width: 40%;
+  height: 3px;
+  z-index: 10;
+}
+.second-hand{
+  background: #b3b3b3;
+  width: 45%;
+  height: 2px;
+  z-index: 11;
+}

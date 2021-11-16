@@ -1,0 +1,82 @@
+<!DOCTYPE html> <!--告诉浏览器以html格式来对待这份文件-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!--UTF-8代码解析格式-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>base</title>
+  <style>
+    body {
+      font-size: 0;
+    }
+    div, p {
+      font-size: 20px;
+    }
+    span{
+      width: 200px;
+      height: 50px;
+      background: pink;
+      display: inline-block;
+      line-height: 50px;
+      font-size: 16px;
+    }
+    .address{
+      width: 100px;
+      height: 50px;
+      background: rgb(86, 238, 175); 
+      display: inline-block;
+      text-align: center;
+      line-height: 50px;
+      font-size: 16px;
+    }
+    .icon{
+      width: 50px;
+      height: 50px;
+      background: rgb(238, 171, 47);
+      display: inline-block;
+      line-height: 50px;
+      font-size: 16px;
+    }
+    .parent{
+      width: 400px;
+      height: 400px;
+      background: rgb(235, 132, 132);
+      position: relative; /* 相对定位 */
+    }
+    .child{
+      /* width: 100px;
+      height: 100px; */
+      background: rgb(34, 228, 34);
+      text-align: center;
+      /* line-height: 100px; */
+      padding: 20px;
+      position: absolute; /* 绝对定位 */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div> <!--标签，盒子，容器-->
+    Hello world
+  </div> 
+  <p>
+    这是p标签
+  </p>
+  <span>
+    这是span标签
+  </span>
+  <a href="www.baidu.com" class="address">百度</a>
+  <i class="icon">123</i>
+  <em>emmmmmm</em>
+  <section>这一个段落模块</section>
+
+  <hr></hr>
+
+
+  <div class="parent">
+    <div class="child">南洋</div>
+  </div>
+</body>
+</html>
