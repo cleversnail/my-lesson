@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript"
+    src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=uepZwmCORjYrbfP6nAncguX2kKqjfc9B"></script>
+  <title>浏览器定位</title>
+  <style>
+    html,
+    body,
+    #allmap {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="allmap"></div>
+
+  <script>
+    var map = new BMapGL.Map("allmap");
+    var point = new BMapGL.Point(115.83483122958, 28.719840858125);
+    map.centerAndZoom(point, 12);
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+    // 定位
+    var geolocation = new BMapGL.Geolocation();
+    geolocation.getCurrentPosition(function (r) {
+      console.log(r);
+      if (this.getStatus() == BMAP_STATUS_SUCCESS) { // 是否成功获取位置
+        var mk = new BMapGL.Marker(r.point);
+        map.addOverlay(mk); // 标记出来
+        map.panTo(r.point);
+
+        // 描述出当前的位置
+        //创建地址解析器实例
+        var myGeo = new BMapGL.Geocoder();
+        myGeo.getLocation(new BMapGL.Point(r.point.lng, r.point.lat), function (result) {
+          if (result) {
+            alert(result.address);
+          }
+        })
+      }
+    })
+  </script>
+</body>
+
+</html>
