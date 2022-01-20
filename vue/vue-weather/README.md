@@ -1,24 +1,13 @@
 # vue-weather
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Views > index.vue
 
-### Lints and fixes files
-```
-npm run lint
-```
+## 写的是高德地图获取天气情况
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## Views > chinaMap .vue
+
+Ecahrts5.x 中的飞线图
