@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(item, index) in list" :key="Math.random()">{{item.num}}</li>
+    </ul>
+    <button @click="change">改变</button>
+  </div>
+</body>
+<script>
+  let app = new Vue({
+    el: '#app',
+    data () {
+      return {
+        list: [
+          {
+            id: 'a1',
+            num: 1
+          },
+          {
+            id: 'b2',
+            num: 2
+          },
+          {
+            id: 'c3',
+            num: 3
+          }
+        ]
+      }
+    },
+    methods: {
+      change() {
+        this.list.reverse()
+      }
+    }
+  })
+
+  // children: [ // old
+  //   {
+  //     tag: 'li',
+  //     key: 0.27347654,
+  //     props: {
+  //       val: 1
+  //     }
+  //   },
+  //   {
+  //     tag: 'li',
+  //     key: 0.98653276,
+  //     props: {
+  //       val: 2
+  //     }
+  //   },
+  //   {
+  //     tag: 'li',
+  //     key: 0.36584971,
+  //     props: {
+  //       val: 3
+  //     }
+  //   }
+  // ]
+</script>
+</html>
