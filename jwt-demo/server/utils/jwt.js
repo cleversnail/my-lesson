@@ -6,6 +6,7 @@ function sign(option) {
   })
 }
 
+// 新增代码
 let verify = (isAdmin) => (ctx, next) => {
   let jwtToken = ctx.req.headers.authorization
   if (jwtToken) {
