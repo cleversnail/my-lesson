@@ -13,6 +13,8 @@ Page({
       { name: '粗茶', id: 'cucha' },
       { name: '淡饭', id: 'danfan' }
     ],
+    curIndex:0,
+    toView:"cucha",
     detail: [
       {
         banner: 'http://img.redocn.com/sheji/20151221/tangguobudingbannerlingshipaipsdfencengsucai_5626296.jpg',
@@ -154,7 +156,13 @@ Page({
       }
     ]
   },
-
+  switchTab(e){
+    console.log(e)
+    this.setData({
+      curIndex:e.currentTarget.dataset.index,
+      toView:e.currentTarget.dataset.id
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

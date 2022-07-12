@@ -5,13 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
+    imgUrls:[
       '/image/b1.jpg',
       '/image/b2.jpg',
       '/image/b3.jpg'
     ],
-    duration: 800,
-    interval: 3000
+    indicatorDots:true,
+    indicatorColor:"gray",
+    autoplay:true,
+    interval:3000,
+    duration: 800, 
+    circular:true
   },
 
   /**
