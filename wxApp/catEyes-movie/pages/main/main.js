@@ -12,26 +12,37 @@ Page({
     duration: 500,
     circular: true,
     imgUrls:[
-      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594983926333&di=1c66fdc514ac9b508cee7dbed890da8b&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201408%2F24%2F150506tvs8u3iwomt3m4db.jpg',
-      'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2322586521,1424670867&fm=26&gp=0.jpg',
-      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594983926332&di=e219c7f31723dcce1cc437da57c16d75&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2Fw1920h1080%2F20180130%2Fbabe-fyrcsrv8730487.jpg'
+      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F110814%2F6351-110Q40R44376.jpg&refer=http%3A%2F%2Fimg.taopic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660093745&t=3258a6af0a3cffb060470141bc528fe0',
+      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2F1114%2F102920105033%2F201029105033-1-1200.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660093745&t=c212efde89ca6d99a3e8b9f897b4b9ce',
+      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2F911%2F0RQ5122445%2F150RQ22445-7-1200.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660093745&t=51df7de24cf3935f88a291498071a96c'
     ],
     movieList: [
       {
-        isShow: 0,
-        name: "第一次的离别",
-        imgUrl: "https://p1.meituan.net/moviemachine/4ea68a0de8949d99fd7ff426b84d3c381761878.jpg@1l_1e_1c_128w_180h",
-        actor: "艾萨·亚森,凯丽比努尔·热合米图力,艾力乃孜·热合米图力",
-        time: "2020-07-20",
-        wantSee: '9745'
+        isShow: 1,
+        name: "人生大事",
+        imgUrl: "https://p0.pipi.cn/mmdb/25bfd671339c7e8ea33139d0476cb0d92908d.jpg?imageMogr2/thumbnail/2500x2500%3E?imageView2/1/w/128/h/180",
+        actor: "朱一龙,杨恩又,王戈",
+        time: "2022-06-24",
+        wantSee: '',
+        currentPlay: '今天183家影院放映2184场'
       },
       {
         isShow: 1,
-        name: "璀璨薪火3D",
-        imgUrl: "https://p0.meituan.net/moviemachine/1b6ca45db703c6df1c1ad8412ad0639a633073.jpg@1l_1e_1c_128w_180h",
-        actor: "",
-        time: "2020-07-20",
-        wantSee: '1248'
+        name: "神探大战",
+        imgUrl: "https://p0.pipi.cn/mmdb/25bfd6d771f0fa57e267cb131f671a5889b2d.jpg?imageMogr2/thumbnail/2500x2500%3E?imageView2/1/w/128/h/180",
+        actor: "刘青云,蔡卓妍,林峯",
+        time: "2022-07-08",
+        wantSee: '',
+        currentPlay: '今天185家影院放映1867场'
+      },
+      {
+        isShow: 0,
+        name: "外太空的莫扎特",
+        imgUrl: "https://p0.pipi.cn/mmdb/25bfd671be15bf51baf0ee3a5d06b91bf94c3.jpg?imageMogr2/thumbnail/2500x2500%3E?imageView2/1/w/128/h/180",
+        actor: "黄渤,荣梓杉,莫扎特",
+        time: "2022-07-15 本周五上映",
+        wantSee: '166208',
+        currentPlay: ''
       }
     ]
   },
